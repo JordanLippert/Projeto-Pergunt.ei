@@ -3,12 +3,19 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-//app.get("/", (req, resp) => {
-  //  resp.send(" Bem vindo ao PERGUNT.EI ");
-//});
-
 app.get("/", (req, resp) =>{
-    resp.render("index");
+    
+    var nome = "Jordan Lippert";
+    var linguagem = "JavaScript";
+    var mensagemErro = false;
+
+    resp.render("index",{
+        nome: nome,
+        linguagem: linguagem,
+        empresa: "Pergunt.Enterprise",
+        perguntas: 1023,
+        msg: mensagemErro
+    });
 });
 
 app.listen(1107, function(erro){

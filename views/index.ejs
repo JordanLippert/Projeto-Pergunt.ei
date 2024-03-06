@@ -8,6 +8,19 @@
 <body>
     <h1>PERGUNT.EI</h1>
     <hr>
+    <h2>Bem vindos ao PERGUNT.EI</h2>
     <h3>Lista de perguntas</h3>
+
+    <p>Nome: <%=nome%> </p>
+    <p>Linguagem Favorita: <%=linguagem%> </p>
+    <p>Empresa: <%=empresa %> </p>
+    <p>Perguntas realizadas: <%=perguntas %> </p>
+
+    <% if(msg == true){ %>
+        <h4>ERROR 404!</h4>
+    <% } else { %>
+        <h4>Nenhum erro encontrado!</h4>
+    <% } %>
+
 </body>
 </html>
